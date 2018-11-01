@@ -13,6 +13,7 @@ public:
 	int getX() const { return x; }
 	int getY() const { return y; }
 	drob operator+=(const drob &d);
+
 	drob operator-=(const drob &d);
 	drob operator*=(const drob &d);
 	drob operator/=(const drob &d);
@@ -22,7 +23,8 @@ public:
 	drob operator/(const drob &d);
 	double getDrob() const
 	{
-		return (double)x / y;
+		cout << x << " / " << y << " = ";
+		return  (double)x / y;
 	}
 	drob& operator=(const drob&obj);
 
@@ -30,6 +32,9 @@ public:
 	drob operator++(int);
 
 };
+
+ostream &operator<<(ostream&os, const drob&d);
+istream &operator>>(istream&is, drob&d);
 drob operator+(const drob&a, const drob&b);
 drob operator+(const drob&a, int number);
 drob operator+(int number, const drob&a);

@@ -94,6 +94,23 @@ drob drob::operator++(int)
 	this->y++;
 	return tmp;
 }
+ostream & operator<<(ostream & os, const drob & d)
+{
+	os << d.getDrob();
+	return os;
+}
+istream & operator>>(istream & is, drob & d)
+{
+	int n_x;
+	int n_y;
+	is >> n_x;
+	is >> n_y;
+	d.setX(n_x);	
+	d.setY(n_y);
+
+	return is;
+
+}
 drob operator+(const drob & a, const drob & b)
 {
 	drob res(a.getX(), a.getY());

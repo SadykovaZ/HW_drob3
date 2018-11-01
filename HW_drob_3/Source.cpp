@@ -10,5 +10,10 @@ void main()
 	cout << endl;
 	b -= 1;
 	b.print();
+	cout << endl;
+	drob d(4,3);
+	cin >> d;
+	cout << d;
+	cout << endl;
 	system("pause");
 }
